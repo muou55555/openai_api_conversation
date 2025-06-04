@@ -1,0 +1,16 @@
+{
+  "domain": "openai_api_conversation",
+  "name": "OpenAI API Conversation",
+  "after_dependencies": ["assist_pipeline", "intent"],
+  "codeowners": ["@muou55555"],
+  "config_flow": true,
+  "dependencies": ["conversation"],
+  "documentation": "https://github.com/muou55555/openai_api_conversation",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/muou55555/openai_api_conversation/issues1",
+  "version": "2025.06.03",
+  "title": "OpenAI API Conversation",
+  "translations": ["en"],
+  "requirements": ["openai==1.76.2"]
+}

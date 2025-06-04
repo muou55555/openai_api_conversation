@@ -1,0 +1,74 @@
+# Python 自动生成的文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+openai_api_conversation/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+.cloud/
+.DS_Store/
+.blueprint/
+
+# 虚拟环境
+venv/
+env/
+.venv/
+virtualenv/
+
+# 编译的扩展
+build/
+dist/
+*.so
+
+# 日志文件
+*.log
+*.out
+
+# 配置文件（根据实际情况调整）
+.env
+config.ini
+
+# 编辑器和IDE产生的文件
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# Jupyter Notebook 产生的文件
+.ipynb_checkpoints/
+
+# 测试报告
+htmlcov/
+.coverage
+coverage.xml
+
+# 打包相关
+*.egg
+*.whl
+*.tar.gz
+*.zip
+
+# macOS 系统文件
+.DS_Store
+
+# 临时文件
+temp/
+tmp/
+# 除指定文件和目录外忽略其他文件
+*
+!custom_components/
+!custom_components/openai_api_conversation/
+!hacs.json
+!README.md
+!LICENSE
+!LICENCE
+!.gitignore
+!custom_components/openai_api_conversation/**/*
+custom_components/openai_api_conversation/__pycache__/
