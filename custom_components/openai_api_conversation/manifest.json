@@ -9,7 +9,7 @@
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/muou55555/openai_api_conversation/issues1",
-  "version": "2025.06.03",
+  "version": "2025.06.04",
   "title": "OpenAI API Conversation",
   "translations": ["en"],
   "requirements": ["openai==1.76.2"]
