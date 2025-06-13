@@ -26,13 +26,13 @@ This integration enables natural language interactions with OpenAI models within
 - [x] Supports streaming conversations
 - [x] Supports custom prompts and context
 - [x] Supports add multiple models and assistants 
+- [x] Supports customize the MCP server API
+- [x] Supports web search 
 
 ### Planned Features
-- [ ] Support image generation services
-- [ ] Support custom intents and triggers
+- [ ] Supports image generation services
+- [ ] Supports custom intents and triggers
 - [ ] Supports automated scenarios and workflows
-- [ ] Support internet search
-- [ ] Support mcp api 
 
 ---
 
@@ -81,3 +81,5 @@ data:
 ## Notes
 - Ensure internet connectivity for API requests
 - API key security: Never expose your key in templates/automations
+- The extended_openai_conversation integration needs to be disabled.
+- If you want to use the internet connectivity feature, try not to use the internet search function under zhipuai, as conflicts may occur.
