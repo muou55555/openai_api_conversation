@@ -160,7 +160,7 @@ def _convert_content_to_param(
                 role="tool",
                 tool_call_id=content.tool_call_id,
                 name=content.tool_name,
-                content=json.dumps(content.tool_result),
+                content=json.dumps(content.tool_result, ensure_ascii=False),
             )
         ]
 
@@ -519,6 +519,7 @@ class OpenAIConversationEntity(
     ) -> conversation.ConversationResult:
         """Call the API."""
         options = self.entry.options
+        extra_body = {"enable_search": False}
 
         # exposed_entities = self.get_exposed_entities()
         # LOGGER.info(f"=== exposed_entities: {exposed_entities} ===")
@@ -564,10 +565,11 @@ class OpenAIConversationEntity(
                 )
             if tools is None:
                 tools = []
-            tools.append(web_search)
+            # tools.append(web_search)
+
+            extra_body = {"enable_search": True}
 
         model = options.get(CONF_CHAT_MODEL, RECOMMENDED_CHAT_MODEL)
-        LOGGER.info(f"=== Current model: {model} ===")
         messages = [
             m
             for content in chat_log.content
@@ -589,9 +591,10 @@ class OpenAIConversationEntity(
                 "user": chat_log.conversation_id,
                 "tool_choice": "auto",
                 "stream": True,
+                "extra_body": extra_body,
             }
 
-            LOGGER.debug(f">>> Iteration: {_iteration} Model args: {model_args}")
+            LOGGER.debug(f"===>>> Iteration: {_iteration}. model: {model} ===")
 
             if tools:
                 model_args["tools"] = tools
